@@ -8,15 +8,12 @@ public class Account {
 	private Date dateCreated;
 	
 	public Account(){
-		// add date created
 		this.dateCreated = new Date();
 	}
 	
 	public Account(int id, double balance){
 		this.balance = balance;
 		this.id = id;
-		
-		//add date created
 		
 		
 		
