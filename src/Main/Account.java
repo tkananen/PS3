@@ -1,24 +1,26 @@
 package Main;
 
 import java.util.Date;
-
 public class Account {
-	private int id;
-	private double balance;
-	private double annualInterestRate;
+	private int id = 0;
+	private double balance=0;
+	private double annualInterestRate=0 ;
 	private Date dateCreated;
 	
 	public Account(){
+		// add date created
+		this.dateCreated = new Date();
 	}
 	
 	public Account(int id, double balance){
 		this.balance = balance;
 		this.id = id;
 		
+		//add date created
+		
 		
 		
 	}
-	//Accessor for Id
 	public int getId()
 	{
 		return id;
@@ -42,13 +44,27 @@ public class Account {
 	public void setAnnualInterestRate(double annualInterestRate) {
 		this.annualInterestRate = annualInterestRate;
 	}
-	public Date getdateCreated(Date dateCreated){
-		return dateCreated;
+	public Date getDateCreated(){
+		return dateCreated = new java.util.Date();
 	}
-	public double getMonthlyInterestRate(double AnnualRate){
-		double monthlyRate = annualInterestRate / 12;
+	public double getMonthlyInterestRate(){
+		double monthlyRate = (this.annualInterestRate) / 12;
 		return monthlyRate;
 		
+	}
+	public void withdraw(double withdrawAmount)throws InsufficientFundsException{
+		double amountNeeded = 0;
+		if (withdrawAmount <= balance){
+			balance = (balance-withdrawAmount);					
+		}
+		else{
+			 amountNeeded = withdrawAmount - balance;
+			 throw new InsufficientFundsException(amountNeeded);
+		}
+		
+	}
+	public void deposit(double depositAmount)		
+	{ balance = balance + depositAmount;
 	}
 	
 }
