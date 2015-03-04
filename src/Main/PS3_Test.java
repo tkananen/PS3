@@ -66,7 +66,7 @@ public class PS3_Test {
 		
 		assertTrue("The newBalance is less than 0", newBalance < 0);
 		
-		assertTrue("Withdraw > originalBalance", withdrawAmount  > originalBalance);
+		assertTrue("Withdraw < originalBalance", withdrawAmount  > originalBalance);
 		
 	}
 	}
