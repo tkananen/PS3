@@ -18,7 +18,7 @@ public class PS3_Test {
 	public static void tearDownAfterClass() throws Exception {
 	}
 
-	@Before
+	@Before  
 	public void setUp() throws Exception {
 	}
 
