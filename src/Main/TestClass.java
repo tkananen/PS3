@@ -15,7 +15,7 @@ public class TestClass {
 		
 		
 	}catch(InsufficientFundsException e)
-	{System.out.println("Sorry, but you lack the sufficient funds, you are short$" + e.getAmount());
+	{System.out.println("Sorry, but you lack the sufficient funds, you are short $" + e.getAmount());
 		e.printStackTrace();
 
 		System.out.printf("Your balance remaining is $%.2f\n", a.getBalance());
